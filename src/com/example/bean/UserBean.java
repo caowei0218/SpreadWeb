@@ -5,6 +5,7 @@ import java.io.Serializable;
 /**
  * 用户类
  */
+@SuppressWarnings("serial")
 public class UserBean implements Serializable {
 	private String id;// 用户id
 	private boolean is_boss;// 是否为家庭管理者

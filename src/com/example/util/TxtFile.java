@@ -22,20 +22,20 @@ public class TxtFile {
 	/**
 	 * 生成数据文件
 	 * 
+	 * @param text
+	 *            写入的字符串内容
 	 * @param filePath
 	 *            写入文件的路径
-	 * @param content
-	 *            写入的字符串内容
 	 * @return
 	 */
-	public boolean string2File(String content, String filePath) {
+	public boolean string2File(String text, String filePath) {
 		boolean flag = true;
 		try {
 			File file = new File(filePath);
 			if (!file.exists()) {
 				file.createNewFile();
 			}
-			bufferedReader = new BufferedReader(new StringReader(content));
+			bufferedReader = new BufferedReader(new StringReader(text));
 			bufferedWriter = new BufferedWriter(new FileWriter(file));
 			char buffer[] = new char[1024];
 			int len;
@@ -70,6 +70,7 @@ public class TxtFile {
 	 *            读取后的字符串编码集设置
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	public String file2String(String filePath, String encoding) {
 		StringWriter writer = new StringWriter();
 		File file = new File(filePath);
