@@ -2,138 +2,85 @@ package com.example.bean;
 
 import java.io.Serializable;
 
-/**
- * ”√ªß¿‡
- */
 @SuppressWarnings("serial")
 public class UserBean implements Serializable {
-	private String id;// ”√ªßid
-	private boolean is_boss;//  «∑ÒŒ™º“Õ•π‹¿Ì’ﬂ
-	private String account;// ’À∫≈
-	private String password;// √‹¬Î
-	private String nickName;// Í«≥∆
-	private String age;// ƒÍ¡‰
-	private String gender;// –‘±
-	private String cellPhone;// µÁª∞
-	private String email;// ” œ‰
-	private String date;// ◊¢≤·»’∆⁄
-	private String is_valid;
 
-	public UserBean() {
-		super();
+	private String user_id;
+	private String account;
+	private String password;
+	private String nickname;
+	private String age;
+	private String gender;// Áî∑0ÔºåÂ•≥1
+	private String cellphone;
+	private String email;
+	private String registe_date;
+	private String is_valid = "1";
+	private String token;
+	public String getUser_id() {
+		return user_id;
 	}
-
-	public UserBean(String id, boolean is_boss, String account,
-			String password, String nickName, String age, String gender,
-			String cellPhone, String email, String date, String is_valid) {
-		super();
-		this.id = id;
-		this.is_boss = is_boss;
-		this.account = account;
-		this.password = password;
-		this.nickName = nickName;
-		this.age = age;
-		this.gender = gender;
-		this.cellPhone = cellPhone;
-		this.email = email;
-		this.date = date;
-		this.is_valid = is_valid;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public boolean isIs_boss() {
-		return is_boss;
-	}
-
-	public void setIs_boss(boolean is_boss) {
-		this.is_boss = is_boss;
-	}
-
 	public String getAccount() {
 		return account;
 	}
-
 	public void setAccount(String account) {
 		this.account = account;
 	}
-
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	public String getNickName() {
-		return nickName;
+	public String getNickname() {
+		return nickname;
 	}
-
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
-
 	public String getAge() {
 		return age;
 	}
-
 	public void setAge(String age) {
 		this.age = age;
 	}
-
 	public String getGender() {
 		return gender;
 	}
-
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-	public String getCellPhone() {
-		return cellPhone;
+	public String getCellphone() {
+		return cellphone;
 	}
-
-	public void setCellPhone(String cellPhone) {
-		this.cellPhone = cellPhone;
+	public void setCellphone(String cellphone) {
+		this.cellphone = cellphone;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public String getDate() {
-		return date;
+	public String getRegiste_date() {
+		return registe_date;
 	}
-
-	public void setDate(String date) {
-		this.date = date;
+	public void setRegiste_date(String registe_date) {
+		this.registe_date = registe_date;
 	}
-
 	public String getIs_valid() {
 		return is_valid;
 	}
-
 	public void setIs_valid(String is_valid) {
 		this.is_valid = is_valid;
 	}
-
-	public String toString() {
-		return "UserBean [id=" + id + ", is_boss=" + is_boss + ", account="
-				+ account + ", password=" + password + ", nickName=" + nickName
-				+ ", age=" + age + ", gender=" + gender + ", cellPhone="
-				+ cellPhone + ", email=" + email + ", date=" + date
-				+ ", is_valid=" + is_valid + "]";
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
 	}
 
 }

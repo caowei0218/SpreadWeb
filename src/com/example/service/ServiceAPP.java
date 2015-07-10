@@ -1,20 +1,20 @@
 package com.example.service;
 
 import com.example.bean.UserBean;
-import com.example.util.TxtFile;
+import com.example.util.TextFile;
 
 public class ServiceAPP {
-	TxtFile txt;
+	TextFile text;
 
 	public UserBean register(UserBean user) {
-		txt = new TxtFile();
-		txt.string2File(user.toString(), "D:\\chen.txt");
+		text = new TextFile();
+		text.string2File(user.toString(), "D:\\Spread.txt");
 		return user;
 	}
 
 	public UserBean login(UserBean user) {
-		txt = new TxtFile();
-		txt.string2File(user.toString(), "D:\\chen.txt");
+		text = new TextFile();
+		text.string2File(user.toString(), "D:\\Spread.txt");
 		System.out.println("登陆接口访问成功");
 		return user;
 	}
